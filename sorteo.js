@@ -8,7 +8,15 @@ const containerGanador = document.querySelector(".container_ganador")
 
 botonSubmit.addEventListener("click", registrar)
 botonSortear.addEventListener("click", sortear)
+listaContainer.addEventListener("click", e=>{
+    let texto = (e.path[1].childNodes[0].textContent)
+    let trimmedTexto = texto.trim();
 
+    if(e.target.classList.contains("span_x")){
+        borrarDeLS(trimmedTexto)
+   
+    }
+})
 
 function registrar(){
     if(inputNombres.value === ""){
@@ -35,17 +43,14 @@ function  plasmarEnLista(){
         div.classList.add("lista-registrados")
         listaContainer.append(div)
     });
-    
-}
-listaContainer.addEventListener("click", e=>{
-    let texto = (e.path[1].childNodes[0].textContent)
-    let trimmedTexto = texto.trim();
-
-    if(e.target.innerHTML = "X"){
-        borrarDeLS(trimmedTexto)
-   
+    if(listaContainer.firstChild){
+        botonSortear.classList.remove("escondido")
+    }else{
+        botonSortear.classList.add("escondido")
     }
-})
+
+}
+
 
 function borrarDeLS(trimmedTexto){
     let indexABorrar = listaDePersonas.findIndex(persona => persona.nombre === trimmedTexto)
@@ -57,13 +62,16 @@ function borrarDeLS(trimmedTexto){
 
 function sortear(){
     if(containerGanador.firstChild){
-        containerGanador.removeChild(containerGanador.firstChild)
+        containerGanador.innerHTML = ""
     }
     const nombreGanador = document.createElement("div")
     nombreGanador.classList.add("nombre_ganador")
     nombreGanador.innerHTML = listaDePersonas[Math.floor(Math.random()* listaDePersonas.length)].nombre
-    containerGanador.append(nombreGanador)
-   //console.log(listaDePersonas[Math.floor(Math.random()* listaDePersonas.length)].nombre)
+    const felicitacion = document.createElement("div")
+    felicitacion.classList.add("felicitacion")
+    felicitacion.innerHTML = "felicitaciones!!!"
+    containerGanador.append(felicitacion, nombreGanador)
+  
 }
 //``
 window.addEventListener("DOMContentLoaded",plasmarEnLista)

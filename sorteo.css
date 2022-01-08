@@ -95,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3em auto;
+   
 }
 .lista-registrados{
     text-align: center;
@@ -109,4 +109,18 @@
     display:flex;
     justify-content: space-between;
    
+}
+.escondido{
+    display: none;
+}
+.felicitacion{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
 }
