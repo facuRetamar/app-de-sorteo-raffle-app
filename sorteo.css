@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.body{
+    background: linear-gradient(to right, rgb(45, 57, 224), rgb(81, 5, 168));
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_app{
+    width: 500px;
+    height: max-content;
+    min-height: 700px;
+    
+    border-radius: 10px;
+    background: linear-gradient(to left bottom, rgba(255,255,255,.2),rgba(255,255,255,.4));
+    display: flex;
+    flex-direction: column;
+}
+.input_container{
+    height: 30%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lista_container{
+    width: 100%;
+    height: min-content;
+    
+
+}
+.input-nombre{
+    width: 70%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 1em;
+    border-radius: 5px;
+    border: none;
+}
+.submit{
+    width: 70%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: x-large;
+    font-weight:900;
+    background: rgb(49, 49, 248);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.persona_container{
+    width: 90%;
+    height: 40px;
+    color: black
+}
+
+.span_x{
+    cursor: pointer;
+}
+.resultado{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+   margin-top: 2em;
+    align-items: center;
+}
+.boton_sorteo{
+    font-size: x-large;
+    font-weight: 900;
+    background: rgb(82, 190, 82);
+    padding: .7em 1.5em;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    
+}
+.nombre_ganador{
+    height: 4rem;
+    width: 300px;
+    background: cornflowerblue;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rgb(255, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em auto;
+}
+.lista-registrados{
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    font-size: 1.5rem;
+    padding: .5em 1em;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+    color: white;
+    display:flex;
+    justify-content: space-between;
+   
+}
