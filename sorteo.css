@@ -7,7 +7,8 @@
 .body{
     background: linear-gradient(to right, rgb(45, 57, 224), rgb(81, 5, 168));
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +16,7 @@
 .contenedor_app{
     width: 500px;
     height: max-content;
-    min-height: 700px;
-    
+    min-height: 500px;
     border-radius: 10px;
     background: linear-gradient(to left bottom, rgba(255,255,255,.2),rgba(255,255,255,.4));
     display: flex;
@@ -69,7 +69,7 @@
 }
 .resultado{
     width: 100%;
-    height: 100px;
+    height: max-content;
     display: flex;
     flex-direction: column;
    margin-top: 2em;
@@ -83,7 +83,7 @@
     border: none;
     border-radius: 5px;
     width: 200px;
-    
+    margin-bottom: 2em;
 }
 .nombre_ganador{
     height: 4rem;
@@ -95,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
+   margin-bottom: 2em;
 }
 .lista-registrados{
     text-align: center;
@@ -108,7 +108,7 @@
     color: white;
     display:flex;
     justify-content: space-between;
-   
+   height: max-content
 }
 .escondido{
     display: none;
@@ -123,4 +123,7 @@
     margin-top: 1em;
     margin-bottom: 1em;
     
+}
+.container_ganador{
+    height:max-content;
 }

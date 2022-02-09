@@ -36,6 +36,7 @@ function registrar(){
 
 function  plasmarEnLista(){
     listaContainer.innerHTML = ""
+    listaDePersonas = JSON.parse(localStorage.getItem("personas"))
     let lista = JSON.parse(localStorage.getItem("personas"))
     lista.forEach(element => {
         const div = document.createElement("div")
@@ -64,6 +65,7 @@ function sortear(){
     if(containerGanador.firstChild){
         containerGanador.innerHTML = ""
     }
+    
     const nombreGanador = document.createElement("div")
     nombreGanador.classList.add("nombre_ganador")
     nombreGanador.innerHTML = listaDePersonas[Math.floor(Math.random()* listaDePersonas.length)].nombre
